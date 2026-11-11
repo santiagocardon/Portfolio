@@ -9,9 +9,20 @@ const pixel = DotGothic16({ weight: "400", subsets: ["latin"], variable: "--font
 const mono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://santiagocardona.xyz"),
   title: "Santiago Cardona | Desarrollador Backend Java Junior",
   description:
     "Portfolio de Santiago Cardona, estudiante de 2.º de DAM en Madrid. Desarrollo backend con Java, JDBC, SQL y PostgreSQL; Spring Boot en aprendizaje.",
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Santiago Cardona",
+    title: "Santiago Cardona | Desarrollador Backend Java Junior",
+    description: "Estudiante de 2.º de DAM en Madrid. Backend con Java, JDBC, SQL y PostgreSQL.",
+    locale: "es_ES",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
